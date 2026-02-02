@@ -20,6 +20,10 @@
     * { box-sizing: border-box; }
 
     body {
+      <audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/02/23/audio_cf9c9e3f60.mp3?filename=romantic-piano-112191.mp3" type="audio/mpeg">
+</audio>
+      
       margin: 0;
       min-height: 100svh;
       display: grid;
@@ -291,6 +295,16 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.6; // soft romantic volume
+  music.play();
+
+  zone.style.display = "none";
+  hint.style.display = "none";
+  result.style.display = "block";
+  resizeConfettiCanvas();
+  fullScreenConfetti();
+});
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
@@ -299,4 +313,5 @@
     });
   </script>
 </body>
+
 </html>

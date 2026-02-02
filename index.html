@@ -20,10 +20,6 @@
     * { box-sizing: border-box; }
 
     body {
-      <audio id="bgMusic" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/02/23/audio_cf9c9e3f60.mp3?filename=romantic-piano-112191.mp3" type="audio/mpeg">
-</audio>
-      
       margin: 0;
       min-height: 100svh;
       display: grid;
@@ -175,7 +171,7 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Rituu will you be my valentine?</h1>
+    <h1>Ritu will you be my valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -295,16 +291,6 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
-  const music = document.getElementById("bgMusic");
-  music.volume = 0.6; // soft romantic volume
-  music.play();
-
-  zone.style.display = "none";
-  hint.style.display = "none";
-  result.style.display = "block";
-  resizeConfettiCanvas();
-  fullScreenConfetti();
-});
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
@@ -313,5 +299,4 @@
     });
   </script>
 </body>
-
 </html>
